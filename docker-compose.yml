@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    image: tazhibayev-nuradil-devops
+    container_name: tazhibayev-nuradil-container
+    environment:
+      STUDENT_NAME: ${STUDENT_NAME:-Nuradil}
+      STUDENT_SURNAME: ${STUDENT_SURNAME:-Tazhibayev}
+      STUDENT_GROUP: ${STUDENT_GROUP:-IT2-2310}
+      STUDENT_ID: ${STUDENT_ID:-34608}
+    command: ["sh", "-c", "python app.py && sleep 600"]
